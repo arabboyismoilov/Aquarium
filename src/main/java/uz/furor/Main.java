@@ -24,7 +24,7 @@ public class Main {
             thread.start();
         }
 
-        // this thread checks fish's location in every 0.5s and creates new fish if some conditions match
+        // this thread checks fish's location in every 1s and creates new fish if some conditions match
         Thread locationCheckThread = new Thread(new LocationCheckThread());
         locationCheckThread.start();
     }
