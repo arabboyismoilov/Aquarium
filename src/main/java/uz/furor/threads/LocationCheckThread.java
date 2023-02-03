@@ -7,7 +7,7 @@ import uz.furor.service.FishService;
 import uz.furor.util.Constants;
 
 /**
- * This class is thread that checks fishList in every 0.5s to find two fish which are in same location
+ * This class is thread that checks fishList in every 1s to find two fish which are in same location
  * */
 public class LocationCheckThread implements Runnable{
     private static final Logger logger = LogManager.getLogger(LocationCheckThread.class);
@@ -24,8 +24,8 @@ public class LocationCheckThread implements Runnable{
             logger.info("Checking locations...");
             FishService.checkLocations();
 
-            // this thread checks fishList in every 0.5s
-            Thread.sleep(500);
+            // this thread checks fishList in every 1s
+            Thread.sleep(1000);
         }
     }
 }
