@@ -21,7 +21,9 @@ public class FishThread implements Runnable{
     @SneakyThrows
     @Override
     public void run() {
+        // finding when fish should die according to lifeDuration
         long stopTime = System.nanoTime() + TimeUnit.SECONDS.toNanos(fish.getLifeDuration());
+        
         logger.info("Fish started to live: {}", fish);
 
         while (true){
